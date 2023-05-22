@@ -1,4 +1,5 @@
 function textTyping(){
+    console.log("수정했다에요");
     /* I'm a <- 한번만 타이핑 해줄 텍스트 효과 */
     const text = document.querySelector(".text");
     // div 태그 선택

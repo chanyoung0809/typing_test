@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>타이핑 완성입니다</title>
     <style>
+        * {margin: 0; padding: 0;}
         .text { color:green; font-size:80px; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);}
-        .text::after { content:"|"; color:red; 
+        .text::after { content:"|"; color:#00C; 
                         animation-name:cursor; animation-duration:0.5s; animation-timing-function:linear; animation-iteration-count:infinite;}
         .text .child { color:orange;}
         @keyframes cursor{

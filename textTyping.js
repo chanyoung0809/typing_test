@@ -1,10 +1,18 @@
 function textTyping(){
-    let a = 0;
+    let a = 30;
     console.log(typeof(a));
+    console.log("정말진짜최종최종본2");
+    console.log("333");
     console.log("정말진짜최종최종본");
     console.log("정말진짜최종최종본");
     console.log("정말진짜최종최종본");
     console.log("정말진짜최종최종본");
+    console.log("정말진짜최종최종본2");
+    console.log("정말진짜최종최종본2");
+    console.log("정말진짜최종최종본3");
+    console.log("정말진짜최종최종본4");
+    console.log("정말진짜최종최종본5");
+    console.log("정말진짜최종최종본44");
     console.log("정말진짜최종최종본");
     console.log("정말진짜최종최종본");
     /* I'm a <- 한번만 타이핑 해줄 텍스트 효과 */

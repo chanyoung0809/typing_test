@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이핑 완성입니다</title>
+    <style>
+        .text { color:green; font-size:80px; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);}
+        .text::after { content:"|"; color:red; 
+                        animation-name:cursor; animation-duration:0.5s; animation-timing-function:linear; animation-iteration-count:infinite;}
+        .text .child { color:orange;}
+        @keyframes cursor{
+            0% { opacity:1;}
+            100% { opacity:0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="text"></div>
+    <!-- <script>
+        const text = document.querySelector(".text");
+        let context = "Publisher";
+        let charIndex = 0;
+        let maxIndex = context.length;
+
+        let autoTyping = setInterval(function(){
+            typing();
+        },200);
+
+        function typing(){
+
+            if(charIndex < context.length){
+                text.innerText += context[charIndex];
+                charIndex++;
+                if(charIndex >= context.length){
+                    maxIndex = context.length;
+                    stopAndStart();
+                }
+            }
+            else if(maxIndex >= 0){
+                text.innerText = context.substring(0,maxIndex);
+                maxIndex--;
+                if(maxIndex < 0){
+                    charIndex = 0;
+                    stopAndStart();
+                }
+            }
+        }
+
+        function stopAndStart(){
+            clearInterval(autoTyping);
+            setTimeout(function(){
+                autoTyping = setInterval(function(){
+                    typing();
+                },200);
+            },3000);
+        }
+    </script> -->
+
+    <script>
+        const text = document.querySelector(".text");
+        let intro = "I'm a ";
+        let textIndex = 0;
+        let autoTyping;
+        
+        let frontTextAuto = setInterval(function(){
+            
+            text.innerText += intro[textIndex];
+            textIndex++;
+            if(textIndex >= intro.length){
+                let child = document.createElement("span");
+                child.setAttribute("class","child");
+                text.append(child);
+                clearInterval(frontTextAuto);
+                
+                autoTyping = setInterval(function(){
+                    typing();
+                },200);
+            }
+        },200);
+        
+
+        
+
+        let context = ["Publisher","Web Designer","front end","Back end"];
+        let textNumber = 0;
+        let charIndex = 0;
+        let maxIndex;
+
+        function typing(){
+            const child = document.querySelector(".text .child");
+
+            if(charIndex < context[textNumber].length){
+                child.innerText += context[textNumber].charAt(charIndex);
+                charIndex++;
+                if(charIndex >= context[textNumber].length){
+                    maxIndex = context[textNumber].length;
+                    stopAndStart();
+                }
+            }
+            else if(maxIndex >= 0){
+                child.innerText = context[textNumber].substring(0,maxIndex);
+                maxIndex--;
+                if(maxIndex < 0){
+                    charIndex = 0;
+                    if(textNumber == context.length-1){
+                        textNumber = 0;
+                    }
+                    else{
+                        textNumber++;
+                    }
+                    stopAndStart();
+                }
+            }
+        }
+
+        function stopAndStart(){
+            clearInterval(autoTyping);
+            setTimeout(function(){
+                autoTyping = setInterval(function(){
+                    typing();
+                },200);
+            },3000);
+        }
+    </script>
+</body>
+</html>

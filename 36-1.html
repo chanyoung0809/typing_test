@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        .text {color:#0A0; font-size: 70px; position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);}
+        .text::after {content: "|"; color:#C00; animation: cursor .5s linear  infinite;}
+        @keyframes cursor {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+        .text .child {color:#FA0;}
+    </style>
+</head>
+<body>
+    <div class="text"></div>
+    <div class="text2"></div>
+    <script src="textTyping.js"></script>
+    <script>textTyping();</script>
+</body>
+</html>

@@ -2,6 +2,11 @@ function textTyping(){
     let a = 0;
     console.log(typeof(a));
     console.log("정말진짜최종최종본");
+    console.log("정말진짜최종최종본");
+    console.log("정말진짜최종최종본");
+    console.log("정말진짜최종최종본");
+    console.log("정말진짜최종최종본");
+    console.log("정말진짜최종최종본");
     /* I'm a <- 한번만 타이핑 해줄 텍스트 효과 */
     const text = document.querySelector(".text");
     // div 태그 선택
